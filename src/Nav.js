@@ -7,6 +7,7 @@ export const Nav = () => {
       <Link to="/">Users</Link>
       <Link to="/count">Count</Link>
       <Link to="/todo">Todo</Link>
+      <Link to="/text">Text</Link>
     </div>
   );
 };

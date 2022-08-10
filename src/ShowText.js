@@ -1,0 +1,23 @@
+import { useState, useEffect } from 'react';
+
+export const ShowText = () => {
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    console.log('component mounted');
+    return () => {
+      console.log('component unmounted!');
+    };
+  }, []);
+
+  return (
+    <div>
+      <input
+        onChange={(event) => {
+          setText(event.target.value);
+        }}
+      />
+      <h1>{text}</h1>
+    </div>
+  );
+};
