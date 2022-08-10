@@ -9,20 +9,30 @@ export const Todo = () => {
   };
 
   const addTask = () => {
-    const newTodoList = [...todoList, newTask];
-    setTodoList(newTodoList);
+    const task = {
+      id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
+      taskName: newTask,
+    };
+    setTodoList([...todoList, task]);
   };
 
+  const deleteTask = (id) => {
+    setTodoList(todoList.filter((task) => task.id !== id));
+  };
   return (
     <div>
-      todo
       <div className="addTask">
         <input type="text" onChange={handleChange} />
         <button onClick={addTask}>Add task</button>
       </div>
       <div className="list">
         {todoList.map((task, idx) => {
-          return <h1 key={idx}>{task}</h1>;
+          return (
+            <div key={idx}>
+              <h1>{task.taskName}</h1>
+              <button onClick={() => deleteTask(task.id)}>X</button>
+            </div>
+          );
         })}
       </div>
     </div>
