@@ -14,6 +14,10 @@ export const Todo = () => {
       taskName: newTask,
       completed: false,
     };
+
+    /* When adding remember to spread all the elements
+   in the array and then add the new element.  */
+
     setTodoList([...todoList, task]);
   };
 
@@ -22,6 +26,11 @@ export const Todo = () => {
   };
 
   const completeTask = (id) => {
+    /*
+    This update function maps through the array,
+    Then checks that it has the right id.
+    When it does you take that certain task, but then change the completed to true.
+    */
     setTodoList(
       todoList.map((task) => {
         if (task.id === id) {
