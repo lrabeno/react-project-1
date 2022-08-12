@@ -8,16 +8,19 @@ export const CatFact = () => {
 
   const [catFact, setCatFact] = useState('');
 
-  useEffect(() => {
-    console.log('cat fact');
+  const fetchCatFact = () => {
     axios.get('https://catfact.ninja/fact').then((res) => {
       setCatFact(res.data.fact);
     });
+  };
+
+  useEffect(() => {
+    fetchCatFact();
   }, []);
 
   return (
     <div>
-      <button>Generate Cat Fact</button>
+      <button onClick={fetchCatFact}>Generate Cat Fact</button>
       <p>{catFact}</p>
     </div>
   );
