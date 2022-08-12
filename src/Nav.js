@@ -10,6 +10,7 @@ export const Nav = () => {
       <Link to="/text">Text</Link>
       <Link to="/catfact">Cat fact</Link>
       <Link to="/predictage">Predict Age</Link>
+      <Link to="/excuse">Excuse</Link>
     </div>
   );
 };

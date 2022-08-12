@@ -8,6 +8,7 @@ import { Text } from './Text';
 import { Todo } from './Todo';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PredictAge } from './PedictAge';
+import { Excuse } from './Excuse';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/text" element={<Text />} />
           <Route path="/catfact" element={<CatFact />} />
           <Route path="/predictage" element={<PredictAge />} />
+          <Route path="/excuse" element={<Excuse />} />
         </Routes>
       </div>
     </BrowserRouter>
