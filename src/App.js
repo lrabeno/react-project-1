@@ -1,5 +1,6 @@
 import './App.css';
 import { Nav } from './Nav';
+import { CatFact } from './CatFact';
 import { User } from './User';
 import { Count } from './Count';
 import { Planets } from './Planets';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/count" element={<Count />} />
           <Route path="/planets" element={<Planets />} />
           <Route path="/text" element={<Text />} />
+          <Route path="/catfact" element={<CatFact />} />
         </Routes>
       </div>
     </BrowserRouter>
