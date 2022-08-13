@@ -9,6 +9,7 @@ import { Todo } from './components/Todo';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PredictAge } from './components/PedictAge';
 import { Excuse } from './components/Excuse';
+import { Error } from './components/Error';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/catfact" element={<CatFact />} />
           <Route path="/predictage" element={<PredictAge />} />
           <Route path="/excuse" element={<Excuse />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </div>
     </BrowserRouter>
