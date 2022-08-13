@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 
 export const Excuse = () => {
+  // Testing
   const [excuse, setExcuse] = useState('');
 
   const fetchExcuse = (excuse) => {
