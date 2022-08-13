@@ -1,14 +1,14 @@
 import './App.css';
-import { Nav } from './Nav';
-import { CatFact } from './CatFact';
-import { User } from './User';
-import { Count } from './Count';
-import { Planets } from './Planets';
-import { Text } from './Text';
-import { Todo } from './Todo';
+import { Nav } from './components/Nav';
+import { CatFact } from './components/CatFact';
+import { User } from './components/User';
+import { Count } from './components/Count';
+import { Planets } from './components/Planets';
+import { Text } from './components/Text';
+import { Todo } from './components/Todo';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PredictAge } from './PedictAge';
-import { Excuse } from './Excuse';
+import { PredictAge } from './components/PedictAge';
+import { Excuse } from './components/Excuse';
 
 function App() {
   return (
