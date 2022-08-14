@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { PredictAge } from './components/PedictAge';
 import { Excuse } from './components/Excuse';
 import { Error } from './components/Error';
+import { StateManagement } from './components/StateManagement';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/text" element={<Text />} />
           <Route path="/catfact" element={<CatFact />} />
           <Route path="/predictage" element={<PredictAge />} />
+          <Route path="/statemanagement" element={<StateManagement />} />
           <Route path="/excuse" element={<Excuse />} />
           <Route path="/*" element={<Error />} />
         </Routes>
