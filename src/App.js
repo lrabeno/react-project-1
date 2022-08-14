@@ -1,20 +1,20 @@
 import './App.css';
-import { Nav } from './components/Nav';
-import { CatFact } from './components/CatFact';
-import { User } from './components/User';
-import { Count } from './components/Count';
-import { Planets } from './components/Planets';
-import { Text } from './components/Text';
-import { Todo } from './components/Todo';
+import { Nav } from './pages/Nav';
+import { CatFact } from './pages/CatFact';
+import { User } from './pages/User';
+import { Count } from './pages/Count';
+import { Planets } from './pages/Planets';
+import { Text } from './pages/Text';
+import { Todo } from './pages/Todo';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PredictAge } from './components/PedictAge';
-import { Excuse } from './components/Excuse';
-import { Error } from './components/Error';
-import { StateManagement } from './components/StateManagement';
-import { Footer } from './components/Footer';
-import { Home } from './components/Home';
-import { Profile } from './components/Profile';
-import { Menu } from './components/Menu';
+import { PredictAge } from './pages/PedictAge';
+import { Excuse } from './pages/Excuse';
+import { Error } from './pages/Error';
+import { StateManagement } from './pages/StateManagement';
+import { Footer } from './pages/Footer';
+import { Home } from './pages/Home';
+import { Profile } from './pages/Profile';
+import { Menu } from './pages/Menu';
 import { useState } from 'react';
 
 function App() {
