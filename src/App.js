@@ -13,10 +13,12 @@ import { Error } from './components/Error';
 import { StateManagement } from './components/StateManagement';
 import { Footer } from './components/Footer';
 import { Home } from './components/Home';
-import { Contact } from './components/Contact';
+import { Profile } from './components/Profile';
 import { Menu } from './components/Menu';
+import { useState } from 'react';
 
 function App() {
+  const [username, setUserName] = useState('Louis Rabeno');
   return (
     <BrowserRouter>
       <div className="App">
@@ -31,8 +33,8 @@ function App() {
           <Route path="/predictage" element={<PredictAge />} />
           <Route path="/statemanagement" element={<StateManagement />} />
           <Route path="/excuse" element={<Excuse />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/home" element={<Home username={username} />} />
+          <Route path="/profile" element={<Profile username={username} />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/*" element={<Error />} />
         </Routes>
