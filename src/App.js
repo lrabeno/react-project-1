@@ -11,6 +11,7 @@ import { PredictAge } from './components/PedictAge';
 import { Excuse } from './components/Excuse';
 import { Error } from './components/Error';
 import { StateManagement } from './components/StateManagement';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/*" element={<Error />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
