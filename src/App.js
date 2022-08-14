@@ -12,6 +12,9 @@ import { Excuse } from './components/Excuse';
 import { Error } from './components/Error';
 import { StateManagement } from './components/StateManagement';
 import { Footer } from './components/Footer';
+import { Home } from './components/Home';
+import { Contact } from './components/Contact';
+import { Menu } from './components/Menu';
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
           <Route path="/predictage" element={<PredictAge />} />
           <Route path="/statemanagement" element={<StateManagement />} />
           <Route path="/excuse" element={<Excuse />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/menu" element={<Menu />} />
           <Route path="/*" element={<Error />} />
         </Routes>
       </div>

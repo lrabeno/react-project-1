@@ -43,6 +43,14 @@
   padding-bottom: 50px;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 50px;
+  background-color: aquamarine;
+}
+
 .addTask {
   height: 30vh;
   background-color: dodgerblue;
