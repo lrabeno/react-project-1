@@ -15,32 +15,36 @@ import { Footer } from './pages/Footer';
 import { Home } from './pages/Home';
 import { Profile } from './pages/Profile';
 import { Menu } from './pages/Menu';
-import { useState } from 'react';
+import { useState, createContext } from 'react';
+
+export const AppContext = createContext();
 
 function App() {
-  const [username, setUserName] = useState('Louis Rabeno');
+  const [username, setUsername] = useState('Louis Rabeno');
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Nav />
-        <Routes>
-          <Route path="/" element={<User />} />
-          <Route path="/todo" element={<Todo />} />
-          <Route path="/count" element={<Count />} />
-          <Route path="/planets" element={<Planets />} />
-          <Route path="/text" element={<Text />} />
-          <Route path="/catfact" element={<CatFact />} />
-          <Route path="/predictage" element={<PredictAge />} />
-          <Route path="/statemanagement" element={<StateManagement />} />
-          <Route path="/excuse" element={<Excuse />} />
-          <Route path="/home" element={<Home username={username} />} />
-          <Route path="/profile" element={<Profile username={username} />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/*" element={<Error />} />
-        </Routes>
-      </div>
-      <Footer />
-    </BrowserRouter>
+    <AppContext.Provider value={{ username, setUsername }}>
+      <BrowserRouter>
+        <div className="App">
+          <Nav />
+          <Routes>
+            <Route path="/" element={<User />} />
+            <Route path="/todo" element={<Todo />} />
+            <Route path="/count" element={<Count />} />
+            <Route path="/planets" element={<Planets />} />
+            <Route path="/text" element={<Text />} />
+            <Route path="/catfact" element={<CatFact />} />
+            <Route path="/predictage" element={<PredictAge />} />
+            <Route path="/statemanagement" element={<StateManagement />} />
+            <Route path="/excuse" element={<Excuse />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/*" element={<Error />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </AppContext.Provider>
   );
 }
 
