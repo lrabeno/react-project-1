@@ -21,7 +21,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 export const AppContext = createContext();
 
 function App() {
-  const client = new QueryClient();
+  const client = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
   const [username, setUsername] = useState('Louis Rabeno');
   return (
     /* QueryClientProvider is from react query. Put it on the top
