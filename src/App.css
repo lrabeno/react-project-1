@@ -85,3 +85,13 @@
   margin-left: 5px;
   text-align: center;
 }
+
+.form-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-div {
+  display: flex;
+  justify-content: center;
+}
