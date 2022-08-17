@@ -1,12 +1,32 @@
+import { useForm } from 'react-hook-form';
+
 export const Form = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <div className="form-div">
-      <form className="form-page">
-        <input type="text" placeholder="Full Name..." />
-        <input type="text" placeholder="Email..." />
-        <input type="text" placeholder="Age..." />
-        <input type="password" placeholder="Password..." />
-        <input type="password" placeholder="Confirm Password..." />
+      <form className="form-page" onSubmit={handleSubmit(onSubmit)}>
+        <input
+          type="text"
+          placeholder="Full Name..."
+          {...register('fullName')}
+        />
+        <input type="text" placeholder="Email..." {...register('email')} />
+        <input type="text" placeholder="Age..." {...register('age')} />
+        <input
+          type="password"
+          placeholder="Password..."
+          {...register('password')}
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password..."
+          {...register('confirmPassword')}
+        />
         <input type="submit" />
       </form>
     </div>
