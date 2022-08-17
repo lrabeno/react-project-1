@@ -12,6 +12,7 @@ export const Nav = () => {
       <Link to="/predictage">Predict Age</Link>
       <Link to="/excuse">Excuse</Link>
       <Link to="/statemanagement">State management</Link>
+      <Link to="/forms">Forms</Link>
     </div>
   );
 };
