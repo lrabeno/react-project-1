@@ -18,6 +18,7 @@ import { Menu } from './pages/Menu';
 import { useState, createContext } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Form } from './pages/Form';
+import { Custom } from './pages/Custom';
 
 export const AppContext = createContext();
 
@@ -54,6 +55,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/forms" element={<Form />} />
+              <Route path="/custom" element={<Custom />} />
 
               <Route path="/*" element={<Error />} />
             </Routes>

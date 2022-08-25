@@ -13,6 +13,7 @@ export const Nav = () => {
       <Link to="/excuse">Excuse</Link>
       <Link to="/statemanagement">State management</Link>
       <Link to="/forms">Forms</Link>
+      <Link to="custom">Custom Hook</Link>
     </div>
   );
 };
