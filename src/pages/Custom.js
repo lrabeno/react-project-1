@@ -1,13 +1,12 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+import { useToggle } from '../useToggle';
 
 export const Custom = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, toggle] = useToggle(false);
 
   return (
     <div>
-      <button onClick={() => setIsVisible((prev) => !prev)}>
-        {isVisible ? 'Hide' : 'Show'}
-      </button>
+      <button onClick={toggle}>{isVisible ? 'Hide' : 'Show'}</button>
       {isVisible ? <h1>secret text!</h1> : ''}
     </div>
   );
